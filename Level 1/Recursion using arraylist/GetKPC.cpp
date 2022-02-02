@@ -49,10 +49,11 @@ vector<string> words = {".,","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz
 
 vector<string> recurse(string input){
     char firstLetter = input[0];   //5
-    if(input.size() == 1 )   {
+    if(input.size() == 0 )   {
         vector<string> ans;
-        int in = firstLetter - '0';
-        for(char c:words.at(in))   ans.push_back(c+"");
+        ans.push_back("");
+        // int in = firstLetter - '0';
+        // for(char c:words.at(in))   ans.push_back(c+"");
         return ans;
     }
     string rest = input.substr(1);   //6
